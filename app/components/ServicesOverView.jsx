@@ -273,9 +273,9 @@ function ServiceCard({ service, index }) {
           }`}
           style={{ flexShrink: 0 }}
         >
-          {/* ────────────────────────────────────────────────────────────
-              SERVICE IMAGE PLACEHOLDER
-              Once you have your images, replace the placeholder div with:
+          
+              {/* SERVICE IMAGE PLACEHOLDER
+              Once you have your images, replace the placeholder div with: */}
 
               <Image
                 src={service.image}
@@ -284,9 +284,9 @@ function ServiceCard({ service, index }) {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
 
-              Make sure to add sizes prop for performance:
-              sizes="(max-width: 768px) 100vw, 50vw"
-          ──────────────────────────────────────────────────────────── */}
+            {/* Make sure to add sizes prop for performance:
+               sizes="(max-width: 768px) 100vw, 50vw"
+           ────────────────────────────────────────────────────────────  */}
           <div
             style={{
               position: "absolute", inset: 0,
@@ -308,14 +308,14 @@ function ServiceCard({ service, index }) {
             />
 
             {/* Image icon placeholder */}
-            <svg
+            {/* <svg
               style={{ color: `${service.accent}50`, position: "relative", zIndex: 1 }}
               className="w-12 h-12"
               fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <p
+            </svg> */}
+            {/* <p
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 color: `${service.accent}60`,
@@ -326,7 +326,7 @@ function ServiceCard({ service, index }) {
               }}
             >
               Add image: {service.image}
-            </p>
+            </p> */}
           </div>
 
           {/* Gradient overlay blending image into card */}

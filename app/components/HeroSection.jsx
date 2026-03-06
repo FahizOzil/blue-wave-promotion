@@ -2,19 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-// ============================================================
-// HERO SECTION — BlueWave Promotions
-// Full-screen cinematic hero with:
-//   • Animated SVG wave layers at the bottom
-//   • Canvas particle/bubble field (ocean feel)
-//   • Staggered text reveal on load
-//   • Floating service badge pills
-//   • Hero IMAGE placeholder (right side)
-//   • Scroll indicator
-// ============================================================
 
-// ── Service badges shown floating around the hero image ──
 const BADGES = [
   { label: "UI/UX Design",       delay: "0s",    pos: "top-6 -left-10"   },
   { label: "Web Development",    delay: "0.15s", pos: "top-1/3 -left-14" },
@@ -484,12 +474,12 @@ export default function HeroSection() {
                 className="absolute"
               />
 
-              {/* ────────────────────────────────────────────────────
-                  HERO IMAGE PLACEHOLDER
-                  Replace the div below with your actual hero image:
+              
+                  {/* HERO IMAGE PLACEHOLDER
+                  Replace the div below with your actual hero image: */}
 
                   <Image
-                    src="/images/hero-main.jpg"    ← Your hero image
+                    src="/images/hero-main.jpg"  
                     alt="BlueWave Promotions"
                     width={420}
                     height={420}
@@ -497,43 +487,11 @@ export default function HeroSection() {
                     priority
                   />
 
-                  Recommended: a professional photo of your team,
+                  {/* Recommended: a professional photo of your team,
                   a device mockup showcase, or an abstract visual
-                  representing your brand (1:1 ratio works best)
-                ──────────────────────────────────────────────────── */}
-              <div
-                style={{
-                  width: "min(360px, 65vw)",
-                  height: "min(360px, 65vw)",
-                  background: "linear-gradient(135deg, rgba(14,165,233,0.15) 0%, rgba(7,20,40,0.8) 50%, rgba(56,189,248,0.1) 100%)",
-                  border: "1px solid rgba(14,165,233,0.2)",
-                  borderRadius: "2rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "12px",
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                {/* Camera icon placeholder */}
-                <svg
-                  style={{ color: "rgba(56,189,248,0.3)" }}
-                  className="w-16 h-16"
-                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "rgba(56,189,248,0.5)" }}
-                  className="text-sm text-center px-6"
-                >
-                  {/* This text disappears once you add your image */}
-                  Place your hero image here
-                  <br />
-                  <span className="text-xs opacity-60">Recommended: 720×720px+</span>
-                </p>
-              </div>
+                  representing your brand (1:1 ratio works best) */}
+               
+             
 
               {/* ── Floating service badge pills ── */}
               {BADGES.map((badge, i) => (
