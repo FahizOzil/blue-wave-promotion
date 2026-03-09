@@ -61,7 +61,7 @@ const TEAM = [
     specialty: "Visual Design",
   },
   {
-    name: "Daniel Forte",
+    name: "Damon Thomas",
     role: "Content & Ebook Specialist",
     bio: "Writer, editor, and layout designer who's helped 50+ coaches and creators publish ebooks that convert.",
     image: "/images/team/team-daniel.jpg",
