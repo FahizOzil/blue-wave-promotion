@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const GRAPHIC_SERVICES = [
@@ -434,47 +435,18 @@ export default function GraphicsDesigningPage() {
                 </div>
               </div>
 
-              <div className={`sr ${overviewInView ? "show" : ""}`}>
+              <div >
                 {/* ────────────────────────────────────────────────────
                     OVERVIEW IMAGE
                     Replace with:
+                    Recommended: brand identity flat lay, design
+                    process photo, or portfolio collage. 1160×880px
+                ──────────────────────────────────────────────────── */}
                     <Image src="/images/services/graphics-overview.jpg"
                       alt="Graphics Design at BlueWave"
                       width={580} height={440}
                       className="rounded-2xl object-cover w-full" />
-                    Recommended: brand identity flat lay, design
-                    process photo, or portfolio collage. 1160×880px
-                ──────────────────────────────────────────────────── */}
-                <div style={{ width: "100%", height: "440px", borderRadius: "1.5rem", background: "linear-gradient(135deg,rgba(56,189,248,.1),rgba(5,15,31,.9),rgba(14,165,233,.07))", border: "1px solid rgba(14,165,233,.18)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "16px", position: "relative", overflow: "hidden" }}>
-
-                  {/* Color swatch grid */}
-                  <div style={{ position: "absolute", inset: 0, display: "flex", flexWrap: "wrap", opacity: 0.06 }}>
-                    {["#38bdf8","#0ea5e9","#0284c7","#7dd3fc","#38bdf8","#0ea5e9","#0284c7","#7dd3fc","#38bdf8","#0ea5e9","#0284c7","#7dd3fc"].map((c, i) => (
-                      <div key={i} style={{ flex: "0 0 33.33%", background: c }} />
-                    ))}
-                  </div>
-
-                  {/* Fake design preview */}
-                  <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
-                    {/* Logo mock */}
-                    <div style={{ width: "70px", height: "70px", borderRadius: "16px", background: "linear-gradient(135deg,rgba(14,165,233,.3),rgba(2,132,199,.2))", border: "1px solid rgba(56,189,248,.35)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <span style={{ fontSize: "1.8rem" }}>◎</span>
-                    </div>
-                    {/* Color palette */}
-                    <div style={{ display: "flex", gap: "6px" }}>
-                      {["#38bdf8","#0ea5e9","#0284c7","#7dd3fc","#020c18"].map(c => (
-                        <div key={c} className="palette-dot" style={{ width: "22px", height: "22px", borderRadius: "50%", background: c, border: "1px solid rgba(255,255,255,.15)" }} />
-                      ))}
-                    </div>
-                    {/* Type specimens */}
-                    <div style={{ textAlign: "center" }}>
-                      <div style={{ fontFamily: "'Syne',sans-serif", color: "rgba(255,255,255,.8)", fontWeight: 800, fontSize: "1.1rem", letterSpacing: ".04em" }}>BRAND NAME</div>
-                      <div style={{ fontFamily: "'DM Sans',sans-serif", color: "rgba(255,255,255,.35)", fontSize: ".65rem", letterSpacing: ".15em" }}>TAGLINE HERE</div>
-                    </div>
-                  </div>
-
-                  <p style={{ fontFamily: "'DM Sans',sans-serif", color: "rgba(56,189,248,.4)", fontSize: ".7rem", position: "relative", zIndex: 1 }}>/images/services/graphics-overview.jpg</p>
-                </div>
+                      
               </div>
             </div>
           </div>
@@ -654,7 +626,7 @@ export default function GraphicsDesigningPage() {
                 { label: "Logo Design",        accent: "#38bdf8", size: "large",  image: "/images/work/gfx-logo.jpg" },
                 { label: "Social Templates",   accent: "#0ea5e9", size: "small",  image: "/images/work/gfx-social.jpg" },
                 { label: "Brand Guidelines",   accent: "#7dd3fc", size: "small",  image: "/images/work/gfx-brand.jpg" },
-                { label: "Packaging Design",   accent: "#0284c7", size: "small",  image: "/images/work/gfx-packaging.jpg" },
+                // { label: "Packaging Design",   accent: "#0284c7", size: "small",  image: "/images/work/gfx-packaging.jpg" },
                 { label: "Pitch Deck",         accent: "#38bdf8", size: "large",  image: "/images/work/gfx-deck.jpg" },
                 { label: "Illustration",       accent: "#0ea5e9", size: "small",  image: "/images/work/gfx-illustration.jpg" },
                 { label: "Business Card",      accent: "#7dd3fc", size: "small",  image: "/images/work/gfx-card.jpg" },
@@ -672,7 +644,7 @@ export default function GraphicsDesigningPage() {
                   position: "relative",
                   cursor: "pointer",
                 }}>
-                  {/* ── Replace with <Image src={item.image} alt={item.label} fill className="object-cover" /> ── */}
+                  <Image src={item.image} alt={item.label} fill className="object-cover" /> ──
                   <div style={{ position: "absolute", inset: 0, backgroundImage: `radial-gradient(${item.accent}15 1px,transparent 1px)`, backgroundSize: "18px 18px" }} />
                   <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(5,15,31,.85) 0%,transparent 60%)" }} />
                   <div style={{ position: "absolute", bottom: ".85rem", left: ".85rem" }}>

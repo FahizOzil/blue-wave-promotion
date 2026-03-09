@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // ============================================================
 // UI/UX DESIGNING SERVICE PAGE — BlueWave Promotions
@@ -399,16 +400,17 @@ export default function UIUXPage() {
                 {/* ────────────────────────────────────────────────────
                     OVERVIEW IMAGE
                     Replace with:
+                    Recommended: Figma screen, device mockup, or
+                    design process photo. 1160×880px
+                ──────────────────────────────────────────────────── */}
                     <Image src="/images/services/ui-ux-overview.jpg"
                       alt="UI/UX Design at BlueWave"
                       width={580} height={440}
                       className="rounded-2xl object-cover w-full" />
-                    Recommended: Figma screen, device mockup, or
-                    design process photo. 1160×880px
-                ──────────────────────────────────────────────────── */}
-                <div style={{ width: "100%", height: "420px", borderRadius: "1.5rem", background: "linear-gradient(135deg,rgba(56,189,248,.1),rgba(5,15,31,.9),rgba(14,165,233,.07))", border: "1px solid rgba(14,165,233,.18)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", position: "relative", overflow: "hidden" }}>
+
+                {/* <div style={{ width: "100%", height: "420px", borderRadius: "1.5rem", background: "linear-gradient(135deg,rgba(56,189,248,.1),rgba(5,15,31,.9),rgba(14,165,233,.07))", border: "1px solid rgba(14,165,233,.18)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", position: "relative", overflow: "hidden" }}>
                   <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(56,189,248,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.06) 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
-                  {/* Fake Figma-like shapes */}
+                  
                   <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", gap: "10px", width: "75%" }}>
                     {[["#38bdf8","90%"],["#0ea5e9","70%"],["#38bdf8","85%"],["#7dd3fc","55%"]].map(([c,w],i) => (
                       <div key={i} style={{ height: "10px", borderRadius: "6px", width: w, background: `${c}22`, border: `1px solid ${c}33` }} />
@@ -418,7 +420,7 @@ export default function UIUXPage() {
                     </div>
                   </div>
                   <p style={{ fontFamily: "'DM Sans',sans-serif", color: "rgba(56,189,248,.4)", fontSize: ".7rem", position: "relative", zIndex: 1 }}>/images/services/ui-ux-overview.jpg</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -562,7 +564,7 @@ export default function UIUXPage() {
               {CASE_STUDIES.map((cs, i) => (
                 <Link key={cs.title} href={cs.href} className="case-card" style={{ opacity: casesInView ? 1 : 0, transform: casesInView ? "translateY(0)" : "translateY(28px)", transition: `opacity .65s ease ${i * .1}s,transform .65s ease ${i * .1}s`, display: "block", textDecoration: "none", background: "rgba(5,15,31,.7)", border: "1px solid rgba(14,165,233,.1)", borderRadius: "1.25rem", overflow: "hidden" }}>
                   <div style={{ height: "200px", background: `linear-gradient(135deg,rgba(5,15,31,.95),${cs.accent}18,rgba(5,15,31,.85))`, position: "relative" }}>
-                    {/* Replace with <Image src={cs.image} alt={cs.title} fill className="object-cover" /> */}
+                    <Image src={cs.image} alt={cs.title} fill className="object-cover" />
                     <div style={{ position: "absolute", inset: 0, backgroundImage: `radial-gradient(${cs.accent}15 1px,transparent 1px)`, backgroundSize: "22px 22px" }} />
                     <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <span style={{ fontFamily: "'DM Sans',sans-serif", color: `${cs.accent}40`, fontSize: ".7rem" }}>{cs.image}</span>

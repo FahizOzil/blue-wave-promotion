@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // ============================================================
 // ABOUT PAGE — BlueWave Promotions
@@ -212,7 +213,7 @@ function TeamCard({ member, index }) {
         {/* ────────────────────────────────────────────────────────
             TEAM MEMBER PHOTO
             Replace the placeholder div with:
-
+*/}
             <Image
               src={member.image}
               alt={member.name}
@@ -220,7 +221,7 @@ function TeamCard({ member, index }) {
               className="object-cover object-top"
               style={{ transform: hovered ? "scale(1.05)" : "scale(1)", transition: "transform 0.6s ease" }}
             />
-        ──────────────────────────────────────────────────────── */}
+        {/* ────────────────────────────────────────────────────────  */}
         <div style={{
           position: "absolute", inset: 0,
           background: `linear-gradient(160deg, rgba(5,15,31,0.9) 0%, ${member.accent}18 50%, rgba(5,15,31,0.8) 100%)`,
@@ -235,7 +236,7 @@ function TeamCard({ member, index }) {
             backgroundSize: "20px 20px",
           }} />
           {/* Initials */}
-          <div style={{
+          {/* <div style={{
             width: "5rem", height: "5rem", borderRadius: "50%",
             background: `linear-gradient(135deg, ${member.accent}30, ${member.accent}10)`,
             border: `2px solid ${member.accent}35`,
@@ -248,7 +249,7 @@ function TeamCard({ member, index }) {
             }}>
               {member.name.split(" ").map(n => n[0]).join("")}
             </span>
-          </div>
+          </div> */}
           <p style={{
             position: "absolute", bottom: "0.75rem",
             fontFamily: "'DM Sans', sans-serif", color: `${member.accent}50`,
@@ -579,16 +580,16 @@ export default function AboutPage() {
 
                   {/* ────────────────────────────────────────────────────
                       STORY / OFFICE IMAGE
-                      Replace with:
+                      Replace with: */}
                       <Image src="/images/about-story.jpg"
                         alt="BlueWave team at work"
                         width={560} height={400}
                         className="rounded-2xl object-cover w-full" />
+                    {/* //     Recommended: behind-the-scenes, team meeting,
+                    //     or workspace photo. Size: 1120×800px
+                    // ────────────────────────────────────────────────────  */}
 
-                      Recommended: behind-the-scenes, team meeting,
-                      or workspace photo. Size: 1120×800px
-                  ──────────────────────────────────────────────────── */}
-                  <div style={{
+                  {/* <div style={{
                     width: "100%", height: "400px",
                     background: "linear-gradient(135deg, rgba(14,165,233,0.12), rgba(5,15,31,0.85), rgba(56,189,248,0.08))",
                     border: "1px solid rgba(14,165,233,0.18)",
@@ -609,7 +610,7 @@ export default function AboutPage() {
                     <p style={{ color: "rgba(56,189,248,0.4)", fontFamily: "'DM Sans', sans-serif", fontSize: "0.8rem", position: "relative", zIndex: 1 }}>
                       Add story image: /images/about-story.jpg
                     </p>
-                  </div>
+                  </div> */}
 
                   {/* Floating accent card */}
                   <div style={{

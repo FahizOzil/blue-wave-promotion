@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // ============================================================
 // WEB DEVELOPMENT SERVICE PAGE — BlueWave Promotions
@@ -461,16 +462,18 @@ export default function WebDevelopmentPage() {
                 {/* ──────────────────────────────────────────────────────
                     OVERVIEW IMAGE PLACEHOLDER
                     Replace with:
+                    Recommended: browser mockup, laptop with website,
+                    or multi-device responsive screenshot. 1160×840px
+                ────────────────────────────────────────────────────── */}
                     <Image
                       src="/images/services/web-dev-overview.jpg"
                       alt="Web Development at BlueWave"
                       width={580} height={420}
                       className="rounded-2xl object-cover w-full"
                     />
-                    Recommended: browser mockup, laptop with website,
-                    or multi-device responsive screenshot. 1160×840px
-                ────────────────────────────────────────────────────── */}
-                <div style={{
+
+
+                {/* <div style={{
                   width: "100%", height: "400px", borderRadius: "1.5rem",
                   background: "linear-gradient(135deg, rgba(14,165,233,0.1), rgba(5,15,31,0.9), rgba(56,189,248,0.07))",
                   border: "1px solid rgba(14,165,233,0.18)",
@@ -478,7 +481,7 @@ export default function WebDevelopmentPage() {
                   position: "relative", overflow: "hidden",
                 }}>
                   <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(14,165,233,0.1) 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-                  {/* Fake browser chrome */}
+                 
                   <div style={{
                     position: "relative", zIndex: 1, width: "85%",
                     background: "rgba(5,15,31,0.9)", border: "1px solid rgba(14,165,233,0.2)", borderRadius: "0.75rem",
@@ -499,7 +502,7 @@ export default function WebDevelopmentPage() {
                   <p style={{ fontFamily: "'DM Sans', sans-serif", color: "rgba(14,165,233,0.4)", fontSize: "0.7rem", position: "relative", zIndex: 1 }}>
                     /images/services/web-dev-overview.jpg
                   </p>
-                </div>
+                </div> */}
               </div>
 
               {/* Right content */}
@@ -708,7 +711,7 @@ export default function WebDevelopmentPage() {
                   {/* Image area */}
                   <div style={{ height: "200px", position: "relative", overflow: "hidden",
                     background: `linear-gradient(135deg, rgba(5,15,31,0.95), ${cs.accent}18, rgba(5,15,31,0.85))` }}>
-                    {/* ── Replace with <Image src={cs.image} alt={cs.title} fill className="object-cover" /> ── */}
+                    <Image src={cs.image} alt={cs.title} fill className="object-cover" /> ──
                     <div style={{ position: "absolute", inset: 0, backgroundImage: `radial-gradient(${cs.accent}15 1px, transparent 1px)`, backgroundSize: "22px 22px" }} />
                     <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <span style={{ fontFamily: "'DM Sans', sans-serif", color: `${cs.accent}40`, fontSize: "0.7rem" }}>{cs.image}</span>

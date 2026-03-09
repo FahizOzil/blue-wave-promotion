@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const PLATFORMS = [
@@ -382,26 +383,14 @@ export default function AppDevPage() {
                 {/* ────────────────────────────────────────────────────
                     OVERVIEW IMAGE
                     Replace with:
+                    Recommended: phone mockup flat lay, multi-device
+                    screenshot, or team working on app. 1160×880px
+                ──────────────────────────────────────────────────── */}
                     <Image src="/images/services/app-dev-overview.jpg"
                       alt="App Development at BlueWave"
                       width={580} height={440}
                       className="rounded-2xl object-cover w-full" />
-                    Recommended: phone mockup flat lay, multi-device
-                    screenshot, or team working on app. 1160×880px
-                ──────────────────────────────────────────────────── */}
-                <div style={{ width: "100%", height: "420px", borderRadius: "1.5rem", background: "linear-gradient(135deg,rgba(14,165,233,.1),rgba(5,15,31,.9),rgba(56,189,248,.07))", border: "1px solid rgba(14,165,233,.18)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "16px", position: "relative", overflow: "hidden" }}>
-                  <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(14,165,233,.08) 1px,transparent 1px)", backgroundSize: "26px 26px" }} />
-                  {/* Two mock phone outlines */}
-                  <div style={{ position: "relative", zIndex: 1, display: "flex", gap: "20px", alignItems: "center" }}>
-                    {[{w:55,h:110,o:.6},{w:45,h:90,o:.35}].map((p, i) => (
-                      <div key={i} style={{ width: p.w, height: p.h, borderRadius: "10px", border: `1.5px solid rgba(56,189,248,${p.o})`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", padding: "6px", gap: "4px" }}>
-                        {[70,50,85].map((w, j) => <div key={j} style={{ height: "4px", width: `${w}%`, borderRadius: "2px", background: `rgba(56,189,248,${p.o * 0.6})` }} />)}
-                        <div style={{ width: "30%", height: "4px", borderRadius: "2px", background: `rgba(56,189,248,${p.o * 0.4})`, marginTop: "4px" }} />
-                      </div>
-                    ))}
-                  </div>
-                  <p style={{ fontFamily: "'DM Sans',sans-serif", color: "rgba(56,189,248,.4)", fontSize: ".7rem", position: "relative", zIndex: 1 }}>/images/services/app-dev-overview.jpg</p>
-                </div>
+                      
               </div>
 
               {/* Left content */}
@@ -609,7 +598,7 @@ export default function AppDevPage() {
               {CASE_STUDIES.map((cs, i) => (
                 <Link key={cs.title} href={cs.href} className="case-card" style={{ opacity: casesInView ? 1 : 0, transform: casesInView ? "translateY(0)" : "translateY(28px)", transition: `opacity .65s ease ${i * .1}s,transform .65s ease ${i * .1}s`, display: "block", textDecoration: "none", background: "rgba(5,15,31,.7)", border: "1px solid rgba(14,165,233,.1)", borderRadius: "1.25rem", overflow: "hidden" }}>
                   <div style={{ height: "200px", background: `linear-gradient(135deg,rgba(5,15,31,.95),${cs.accent}18,rgba(5,15,31,.85))`, position: "relative" }}>
-                    {/* Replace with <Image src={cs.image} alt={cs.title} fill className="object-cover" /> */}
+                     <Image src={cs.image} alt={cs.title} fill className="object-cover" />
                     <div style={{ position: "absolute", inset: 0, backgroundImage: `radial-gradient(${cs.accent}15 1px,transparent 1px)`, backgroundSize: "22px 22px" }} />
                     <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <span style={{ fontFamily: "'DM Sans',sans-serif", color: `${cs.accent}40`, fontSize: ".7rem" }}>{cs.image}</span>
