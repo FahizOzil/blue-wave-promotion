@@ -181,7 +181,7 @@ function ProjectCard({ project, index, visible }) {
 
         {/* ────────────────────────────────────────────────────────────
             PROJECT IMAGE PLACEHOLDER
-            Replace the div below with:
+            Replace the div below with: */}
 
             <Image
               src={project.image}
@@ -192,8 +192,8 @@ function ProjectCard({ project, index, visible }) {
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
 
-            Tip: Use real screenshots of your work at 900×600px minimum.
-        ──────────────────────────────────────────────────────────── */}
+            {/* Tip: Use real screenshots of your work at 900×600px minimum.
+        ────────────────────────────────────────────────────────────  */}
         <div
           style={{
             position: "absolute", inset: 0,
